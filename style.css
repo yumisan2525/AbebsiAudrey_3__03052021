@@ -3,7 +3,8 @@
 
 *,
 *::before,
-*::after {
+*::after 
+{
   box-sizing: border-box;
 }
 
@@ -17,6 +18,7 @@ body
 	font-size: 13px;
     margin: 0px;
     width: auto;
+    box-sizing : border-box;
 }
 
 a 
@@ -28,9 +30,10 @@ a
 h2
 {
     font-family: "Shrikhand", "Sans serif";
-    font-size: 13px;
+    font-size: 20px;
     color: white;
     padding-left: 40px;
+    padding-top: 10px;
 }
 
 header img
@@ -94,15 +97,19 @@ button a
     font-size: 12px;
 }
 .fonctionnement
-{}
+{
+    padding: 10px;
+}
 
 .fonctionnement ol 
 {
+    justify-content: center;
     list-style: none;
     counter-reset: li;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: -16px;
 }
 
 .fonctionnement li::before 
@@ -123,26 +130,31 @@ button a
 
 .fonctionnement li {
     counter-increment: li;
-    border-radius: 30px;
+    border-radius: 14px;
     background-color: #EAEAEA;
+    color: #353535;
     font-weight: bold;
+    height: 50px;
+    font-size: 15px;
     padding: 10px;
-    width: 220px;
-    margin: 20px;
+    width: 311px;
+    margin: 9px;
 }
 
 .fonctionnement .fa-mobile-alt, .fa-list, .fa-store 
 {
-    font-weight: 900;
-    color: #CECECE;
-    margin: 5px;
-    padding-right: 4px;
-
+    margin: 2px;
+    padding-right: 12px;
+    padding-left: 10px;
+    /* height: 49px; */
+    /* size: 15px; */
+    font-size: 21px;
 }
 
 #restaurants
 {
     background-color: #F6F6F6;
+    padding: 10px;
 }
 
 .bloc_restaurants
@@ -151,38 +163,80 @@ button a
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    margin-top: 61px;
 }
 .vignettes
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: space-around;
     background-color: white;
     border-radius: 10px;
-    width: 250px; 
-    height: 200px;
-    margin-bottom: 25px;
+    width: 326px;
+    height: 197px;
+    margin-bottom: 58px;
 }
 
 .vignettes img
 {
     width: 100%;
-    height: 100%;
-    max-height: 90px;
+    /* height: 134px; */
+    max-height: 150px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     object-fit: cover;
     margin-top: -37px;
 }
 
+.image-nouveau 
+{
+    position: relative;
+    width: 100%;
+}
+
+.image-nouveau .image 
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-nouveau .nouveau 
+{
+    background-color: #99e2d0;
+    color: #008766;
+    font-size: 17px;
+    line-height: 1.5em;
+    text-align: center;
+    position: absolute;
+    top: 32px;
+    right: -24px;
+    transform: translate(-50%, -50%);
+    padding: 1px;
+}
+
 .détails
 {
     padding-left: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.fa-heart
+{
+    padding: 15px;
+    font-size: 16px;
+}
+.fa-heart:hover
+{
+    background-color:linear-gradient(167deg,#FF79DA -12%,#9356DC 95%); ;
 }
 footer
 {
     background-color: #353535;
     color: white;
+    height: 125px;
+    margin-top: -11px;
 }
 
 footer a
@@ -200,4 +254,20 @@ footer li
 {
     list-style: none; 
 }
+
+.fa-utensils
+{
+    padding: 2px;
+    padding-right: 12px;
+}
+
+.fa-hands-helping
+{
+    padding: 2px;
+}
+}
+
+.fa-heart:hover
+{
+    background-color:linear-gradient(167deg,#FF79DA -12%,#9356DC 95%); ;
 }
