@@ -36,10 +36,33 @@ h2
     padding-top: 10px;
 }
 
-header img
+h3
+{
+    font-family: "Shrikhand", "Sans serif";
+    font-size: 26px;
+}
+
+h4
+{
+    font-size: 12px;
+    padding: 5px;
+}
+
+header img  
 {
     width:50%;
     padding: 5px;
+}
+img
+{
+    width: 100%;
+}
+.fa-arrow-left
+{
+    font-size: 19px;
+    margin-left: -58px;
+    margin-top: 0px;
+    padding: 9px;
 }
 .title
 {
@@ -233,7 +256,7 @@ button a
 }
 .fa-heart:hover
 {
-    background-color:linear-gradient(167deg,#FF79DA -12%,#9356DC 95%); 
+    color:linear-gradient(167deg,#FF79DA -12%,#9356DC 95%); 
 }
 footer
 {
@@ -269,9 +292,81 @@ footer li
 {
     padding: 2px;
 }
+
+.trait
+{
+    width: 38px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-top: -5px;
+    margin-bottom: 13px;
+    border-bottom-color: #99e2d0;
+}
+.menu
+{
+    background-color: #F6F6F6;
+    border-top-left-radius: 43px;
+    border-top-right-radius: 43px;
+    z-index: 1;
+    margin-top: -54px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.fa-heart:hover
+.titre_menu
+{
+    display: flex;
+    margin-left: 22px;
+    align-items: center;
+}
+
+.titre_menu .fa-heart
+{
+    margin-left: 35px;
+}
+.entrées
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.vignettes-menu
+{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    height: 55px;
+    margin: auto;
+    margin-bottom: 18px;
+    padding: 5px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+
+.prix 
+{
+    margin-top: 29px;
+}
+
+.menu button
+{
+    background: linear-gradient(167deg,#FF79DA -12%,#9356DC 95%);
+    border-style: none;
+    border-radius: 66px;
+    height: 34px;
+    width: 160px;
+    justify-self: center;
+    margin-bottom: 15px;
+    margin-left: 101px;
+}
+
+}
+
+.far.fa-heart:hover
 {
     background-color:linear-gradient(167deg,#FF79DA -12%,#9356DC 95%); ;
 }
