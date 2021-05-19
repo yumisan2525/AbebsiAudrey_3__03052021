@@ -8,10 +8,6 @@
   box-sizing: border-box;
 }
 
-
-@media screen and (max-width: 768px)
-{
-
 body
 {
 	font-family: "Roboto", "Sans serif";
@@ -172,11 +168,12 @@ button a
     margin: 2px;
     padding-right: 12px;
     padding-left: 10px;
-    /* height: 49px; */
-    /* size: 15px; */
     font-size: 21px;
 }
-
+.fonctionnement .fa-mobile-alt:hover, .fa-list:hover, .fa-store:hover
+{
+    color: #9356DC;
+}
 #restaurants
 {
     background-color: #F6F6F6;
@@ -233,14 +230,15 @@ button a
 {
     background-color: #99e2d0;
     color: #008766;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.5em;
     text-align: center;
     position: absolute;
     top: 32px;
     right: -24px;
     transform: translate(-50%, -50%);
-    padding: 1px;
+    padding: 6px;
+    border-radius: 5% 5% 5% 5%;
 }
 
 .détails
@@ -301,6 +299,7 @@ footer li
     margin-top: -5px;
     margin-bottom: 13px;
     border-bottom-color: #99e2d0;
+    margin-left: 6px;
 }
 .menu
 {
@@ -320,12 +319,11 @@ footer li
     display: flex;
     margin-left: 22px;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 40px;
 }
 
-.titre_menu .fa-heart
-{
-    margin-left: 35px;
-}
 .entrées
 {
     display: flex;
