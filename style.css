@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Shrikhand&display=swap");
+@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
 
 *,
 *::before,
@@ -52,6 +53,8 @@ header img
 img
 {
     width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 .fa-arrow-left
 {
@@ -205,7 +208,6 @@ button a
 .vignettes img
 {
     width: 100%;
-    /* height: 134px; */
     max-height: 150px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -247,15 +249,38 @@ button a
     display: flex;
     justify-content: space-between;
 }
-.far.fa-heart
+
+.coeur
 {
-    padding: 15px;
+    margin: 15px;
+}
+.far.fa-heart{
     font-size: 16px;
+    position: absolute;
+    z-index: 1;
+    color: black;
 }
-.fa-heart:hover
-{
-    color:linear-gradient(167deg,#FF79DA -12%,#9356DC 95%); 
+.fas.fa-heart {
+  font-size: 14px;
+    z-index: 2;
+  color: #9356DC;
+  padding: 1px;
+  opacity: 0;
+  transition: 0.3s;
+  position: relative;
 }
+
+.fas:hover.fa-heart:hover {
+  
+    opacity: 5;
+  
+}
+.far:hover.fa-heart:hover {
+  
+color: #9356DC;
+    
+  }
+
 footer
 {
     background-color: #353535;
@@ -343,6 +368,16 @@ footer li
     margin-bottom: 18px;
     padding: 5px;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    border-right: 0 solid #99e2d0;
+    transition: border-right 500ms ease-in-out, padding-right 500ms ease-in-out;
+}
+
+.vignettes-menu:hover 
+{
+  content: "\f00c";
+  font-family: "FontAwesome";
+  padding-right: 10px;
+  border-right: 50px solid #99e2d0;
 }
 
 .prix 
@@ -360,13 +395,6 @@ footer li
     justify-self: center;
     margin-bottom: 15px;
     margin-left: 101px;
-}
-
-}
-
-.far.fa-heart:hover
-{
-    background-color:linear-gradient(167deg,#FF79DA -12%,#9356DC 95%); ;
 }
 
 .far.fa-heart:hover
