@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Shrikhand&display=swap");
-@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
 
 *,
 *::before,
@@ -112,6 +111,7 @@ input
     border-radius: 66px;
     height: 34px;
     width: 160px;
+    color: white;
 }
 
 button a 
@@ -131,7 +131,7 @@ button a
     list-style: none;
     counter-reset: li;
     display: flex;
-    flex-direction: column;
+    flex-flow: wrap;
     align-items: center;
     margin-left: -16px;
 }
@@ -261,26 +261,25 @@ button a
     color: black;
 }
 .fas.fa-heart {
-  font-size: 14px;
+    font-size: 14px;
     z-index: 2;
-  color: #9356DC;
-  padding: 1px;
-  opacity: 0;
-  transition: 0.3s;
-  position: relative;
+    cursor: pointer;
+    background: linear-gradient(357deg
+    ,#FF79DA -12%,#9356DC 103%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1px;
+    opacity: 0;
+    transition: 1.3s;
+    position: relative;
 }
 
-.fas:hover.fa-heart:hover {
+.fas:hover.fa-heart:hover 
+{
   
     opacity: 5;
   
 }
-.far:hover.fa-heart:hover {
-  
-color: #9356DC;
-    
-  }
-
 footer
 {
     background-color: #353535;
@@ -392,15 +391,16 @@ footer li
     width: 160px;
     justify-self: center;
     margin-bottom: 15px;
-    margin-left: 101px;
+    color: white;
+}
+
+.commander
+{
+    display: flex;
+    justify-content: center;
 }
 
 .far.fa-heart:hover
 {
     visibility: hidden;
-}
-
-.fas.fa-heart:hover
-{
-    background-color:linear-gradient(167deg,#FF79DA -12%,#9356DC 95%); 
 }
