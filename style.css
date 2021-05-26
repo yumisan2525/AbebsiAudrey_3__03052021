@@ -1,30 +1,97 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Shrikhand&display=swap");
-
 *,
 *::before,
-*::after 
-{
-  box-sizing: border-box;
+*::after {
+    box-sizing: border-box;
 }
 
-body
-{
-	font-family: "Roboto", "Sans serif";
-	font-size: 13px;
+.chargement {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-items: center;
+    z-index: 20;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #292727;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 3s;
+    animation: loader-page 3s ease-in-out normal forwards;
+    opacity: 1;
+    position: fixed;
+}
+
+.loading-spinner {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #99e2d0, #FF79DA, #9356DC);
+    animation: animate .5s linear infinite;
+}
+
+.loading-spinner:before {
+    content: '';
+    width: 80%;
+    height: 80%;
+    z-index: 10;
+    border-radius: 50%;
+    background-color: #292727;
+}
+
+.loading-spinner span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-page {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+body {
+    font-family: "Roboto", "Sans serif";
+    font-size: 13px;
     margin: 0px;
     width: auto;
-    box-sizing : border-box;
+    box-sizing: border-box;
 }
 
-a 
-{
-   text-decoration: none;
-   color: black;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-h2
-{
+h2 {
     font-family: "Shrikhand", "Sans serif";
     font-size: 20px;
     color: white;
@@ -32,66 +99,66 @@ h2
     padding-top: 10px;
 }
 
-h3
-{
+h3 {
     font-family: "Shrikhand", "Sans serif";
     font-size: 26px;
 }
 
-h4
-{
+h4 {
     font-size: 12px;
     padding: 5px;
 }
 
-header img  
-{
-    width:50%;
+h5 {
+    font-family: "Shrikhand", "Sans serif";
+    font-size: 26px;
+    color: white;
+}
+
+header img {
+    width: 50%;
     padding: 5px;
 }
-img
-{
+
+img {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
 }
-.fa-arrow-left
-{
+
+.fa-arrow-left {
     font-size: 19px;
     margin-left: -58px;
     margin-top: 0px;
     padding: 9px;
 }
-.title
-{
+
+.title {
     display: flex;
     justify-content: center;
 }
 
-.localisation
-{
+.localisation {
     align-self: center;
     color: grey;
     background-color: #EAEAEA;
     margin-left: 67px;
 }
-.recherche
-{
+
+.recherche {
     display: flex;
     justify-content: center;
-    background: linear-gradient(#CECECE 5%,#EAEAEA 10%);
+    background: linear-gradient(#CECECE 5%, #EAEAEA 10%);
 }
 
-input
-{
+input {
     border: none;
     margin: 15px;
     background-color: #EAEAEA;
     font-family: "Roboto", "Sans serif";
 }
 
-.réservation
-{
+.réservation {
     background-color: #F6F6F6;
     display: flex;
     flex-direction: column;
@@ -99,14 +166,12 @@ input
     padding: 10px;
 }
 
-.réservation h1
-{
+.réservation h1 {
     justify-content: center;
 }
 
-.réservation button 
-{
-    background: linear-gradient(167deg,#FF79DA -12%,#9356DC 95%);
+.réservation button {
+    background: linear-gradient(167deg, #FF79DA -12%, #9356DC 95%);
     border-style: none;
     border-radius: 66px;
     height: 34px;
@@ -114,19 +179,17 @@ input
     color: white;
 }
 
-button a 
-{
-    color:white;
+button a {
+    color: white;
     font-size: 12px;
     font-weight: bold;
 }
-.fonctionnement
-{
+
+.fonctionnement {
     padding: 10px;
 }
 
-.fonctionnement ol 
-{
+.fonctionnement ol {
     justify-content: center;
     list-style: none;
     counter-reset: li;
@@ -136,8 +199,7 @@ button a
     margin-left: -16px;
 }
 
-.fonctionnement li::before 
-{
+.fonctionnement li::before {
     content: counter(li);
     color: white;
     display: inline-block;
@@ -166,33 +228,35 @@ button a
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 
-.fonctionnement .fa-mobile-alt, .fa-list, .fa-store 
-{
+.fonctionnement .fa-mobile-alt,
+.fa-list,
+.fa-store {
     margin: 2px;
     padding-right: 12px;
     padding-left: 10px;
     font-size: 21px;
 }
-.fonctionnement .fa-mobile-alt:hover, .fa-list:hover, .fa-store:hover
-{
+
+.fonctionnement .fa-mobile-alt:hover,
+.fa-list:hover,
+.fa-store:hover {
     color: #9356DC;
 }
-#restaurants
-{
+
+#restaurants {
     background-color: #F6F6F6;
     padding: 10px;
 }
 
-.bloc_restaurants
-{
+.bloc_restaurants {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     margin-top: 61px;
 }
-.vignettes
-{
+
+.vignettes {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -205,8 +269,7 @@ button a
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.vignettes img
-{
+.vignettes img {
     width: 100%;
     max-height: 150px;
     border-top-left-radius: 10px;
@@ -215,21 +278,18 @@ button a
     margin-top: -37px;
 }
 
-.image-nouveau 
-{
+.image-nouveau {
     position: relative;
     width: 100%;
 }
 
-.image-nouveau .image 
-{
+.image-nouveau .image {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.image-nouveau .nouveau 
-{
+.image-nouveau .nouveau {
     background-color: #99e2d0;
     color: #008766;
     font-size: 15px;
@@ -243,29 +303,28 @@ button a
     border-radius: 5% 5% 5% 5%;
 }
 
-.détails
-{
+.détails {
     padding-left: 5px;
     display: flex;
     justify-content: space-between;
 }
 
-.coeur
-{
+.coeur {
     margin: 15px;
 }
-.far.fa-heart{
+
+.far.fa-heart {
     font-size: 16px;
     position: absolute;
     z-index: 1;
     color: black;
 }
+
 .fas.fa-heart {
     font-size: 14px;
     z-index: 2;
     cursor: pointer;
-    background: linear-gradient(357deg
-    ,#FF79DA -12%,#9356DC 103%);
+    background: linear-gradient(357deg, #FF79DA -12%, #9356DC 103%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1px;
@@ -274,49 +333,40 @@ button a
     position: relative;
 }
 
-.fas:hover.fa-heart:hover 
-{
-  
+.fas:hover.fa-heart:hover {
     opacity: 5;
-  
 }
-footer
-{
+
+footer {
     background-color: #353535;
     color: white;
     height: 125px;
     margin-top: -18px;
 }
 
-footer a
-{
+footer a {
     color: white;
     padding: 2px;
 }
 
-footer ul
-{
+footer ul {
     list-style: none;
 }
 
-footer li 
-{
-    list-style: none; 
+footer li {
+    list-style: none;
 }
 
-.fa-utensils
-{
+.fa-utensils {
     padding: 2px;
     padding-right: 12px;
 }
 
-.fa-hands-helping
-{
+.fa-hands-helping {
     padding: 2px;
 }
 
-.trait
-{
+.trait {
     width: 38px;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -325,8 +375,8 @@ footer li
     border-bottom-color: #99e2d0;
     margin-left: 6px;
 }
-.menu
-{
+
+.menu {
     background-color: #F6F6F6;
     border-top-left-radius: 43px;
     border-top-right-radius: 43px;
@@ -338,8 +388,7 @@ footer li
     justify-content: center;
 }
 
-.titre_menu
-{
+.titre_menu {
     display: flex;
     margin-left: 22px;
     align-items: center;
@@ -348,14 +397,13 @@ footer li
     padding-right: 40px;
 }
 
-.entrées
-{
+.entrées {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.vignettes-menu
-{
+
+.vignettes-menu {
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -371,20 +419,17 @@ footer li
     transition: border-right 500ms ease-in-out, padding-right 500ms ease-in-out;
 }
 
-.vignettes-menu:hover 
-{
-  padding-right: 10px;
-  border-right: 50px solid #99e2d0;
+.vignettes-menu:hover {
+    padding-right: 10px;
+    border-right: 50px solid #99e2d0;
 }
 
-.prix 
-{
+.prix {
     margin-top: 29px;
 }
 
-.menu button
-{
-    background: linear-gradient(167deg,#FF79DA -12%,#9356DC 95%);
+.menu button {
+    background: linear-gradient(167deg, #FF79DA -12%, #9356DC 95%);
     border-style: none;
     border-radius: 66px;
     height: 34px;
@@ -394,13 +439,11 @@ footer li
     color: white;
 }
 
-.commander
-{
+.commander {
     display: flex;
     justify-content: center;
 }
 
-.far.fa-heart:hover
-{
+.far.fa-heart:hover {
     visibility: hidden;
 }
