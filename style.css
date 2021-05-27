@@ -409,7 +409,7 @@ footer li {
 
 .vignettes-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-content: center;
     background-color: white;
     border-radius: 10px;
@@ -419,9 +419,8 @@ footer li {
     margin-bottom: 18px;
     padding: 5px;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
-    border-right: 0 solid #99e2d0;
-    transition: border-right 500ms ease-in-out, padding-right 500ms ease-in-out;
-    animation: fadein 3s;
+    animation: fadein 2s;
+    overflow: hidden;
 }
 
 @keyframes fadein {
@@ -433,13 +432,37 @@ footer li {
     }
 }
 
-.vignettes-menu:hover {
-    padding-right: 10px;
-    border-right: 50px solid #99e2d0;
+.vignettes-menu p {
+    flex-grow: 1
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99e2d0;
+    height: 55px;
+    width: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: width 500ms ease-in-out;
+    margin-top: -5px;
+    margin-right: -5px
+}
+
+.fa-check-circle {
+    color: white;
+    font-size: 17px;
+}
+
+.vignettes-menu:hover .check {
+    width: 50px;
+    ;
 }
 
 .prix {
-    margin-top: 29px;
+    align-self: flex-end;
+    padding-right: 5px;
 }
 
 .commander {
