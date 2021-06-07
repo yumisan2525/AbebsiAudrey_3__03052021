@@ -80,7 +80,7 @@
 
 body {
     font-family: "Roboto", "Sans serif";
-    font-size: 13px;
+    font-size: 15px;
     margin: 0px;
     width: auto;
     box-sizing: border-box;
@@ -136,6 +136,11 @@ img {
 .title {
     display: flex;
     justify-content: center;
+}
+
+.title a {
+    align-items: center;
+    padding: 5px;
 }
 
 .localisation {
@@ -204,18 +209,24 @@ input {
 
 .fonctionnement li::before {
     content: counter(li);
+    font-family: "Roboto", "Sans serif";
     color: white;
     display: inline-block;
-    width: 18px;
-    padding: 4px;
-    height: 19px;
+    width: 20px;
+    /* max-width: max-content; */
+    /* padding: 6px; */
+    max-height: fit-content;
+    height: 21px;
     margin: 0px;
     margin-left: -17px;
+    margin-bottom: 72px;
     border-radius: 50%;
     background-color: #9356DC;
     font-weight: 400;
     font-size: 11px;
-    object-fit: cover;
+    /* padding-bottom: 1px; */
+    padding-top: 5px;
+    padding-left: 6px;
 }
 
 .fonctionnement li {
@@ -344,7 +355,7 @@ input {
 footer {
     background-color: #353535;
     color: white;
-    height: 125px;
+    height: 140px;
     margin-top: -18px;
 }
 
