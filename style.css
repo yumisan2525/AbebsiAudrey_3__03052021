@@ -329,14 +329,14 @@ input {
 }
 
 .far.fa-heart {
-    font-size: 16px;
+    font-size: 17px;
     position: absolute;
     z-index: 1;
     color: black;
 }
 
 .fas.fa-heart {
-    font-size: 14px;
+    font-size: 15px;
     z-index: 2;
     cursor: pointer;
     background: linear-gradient(357deg, #FF79DA -12%, #9356DC 103%);
@@ -421,7 +421,7 @@ footer li {
 .vignettes-menu {
     display: flex;
     justify-content: flex-end;
-    align-content: center;
+    align-items: center;
     background-color: white;
     border-radius: 10px;
     width: 90%;
@@ -472,7 +472,6 @@ footer li {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     transition: width 500ms ease-in-out;
-    margin-top: -5px;
     margin-right: -5px
 }
 
